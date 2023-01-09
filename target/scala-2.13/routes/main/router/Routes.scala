@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Mon Dec 19 11:30:54 GMT 2022
+// @DATE:Mon Jan 09 14:45:11 GMT 2023
 
 package router
 
