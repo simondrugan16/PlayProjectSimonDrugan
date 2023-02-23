@@ -34,9 +34,9 @@ Seq[Any](format.raw/*8.1*/("""
     <head>
         """),format.raw/*12.62*/("""
         """),format.raw/*13.9*/("""<title>"""),_display_(/*13.17*/title),format.raw/*13.22*/("""</title>
-        <link rel="stylesheet" media="screen" href=""""),_display_(/*14.54*/routes/*14.60*/.Assets.versioned("stylesheets/main.css")),format.raw/*14.101*/("""">
-        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*15.59*/routes/*15.65*/.Assets.versioned("images/favicon.png")),format.raw/*15.104*/("""">
-
+        <link rel="stylesheet" type="text/css" media="screen" href=""""),_display_(/*14.70*/routes/*14.76*/.Assets.versioned("/stylesheets/main.css")),format.raw/*14.118*/("""">
+        <link rel="stylesheet" media="screen" href=""""),_display_(/*15.54*/routes/*15.60*/.Assets.versioned("stylesheets/main.css")),format.raw/*15.101*/("""">
+        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*16.59*/routes/*16.65*/.Assets.versioned("images/favicon.png")),format.raw/*16.104*/("""">
     </head>
     <body>
         """),format.raw/*20.32*/("""
@@ -61,11 +61,11 @@ Seq[Any](format.raw/*8.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-12-16T16:03:51.595
+                  DATE: 2023-02-21T16:22:16.423
                   SOURCE: /Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/views/main.scala.html
-                  HASH: 52352176f1a784d96e62964e439264b508b87d6f
-                  MATRIX: 987->260|1111->291|1138->292|1218->397|1254->406|1289->414|1315->419|1404->481|1419->487|1482->528|1570->589|1585->595|1646->634|1709->759|1746->769|1774->776|1809->784|1850->798|1865->804|1926->844
-                  LINES: 26->7|31->8|32->9|35->12|36->13|36->13|36->13|37->14|37->14|37->14|38->15|38->15|38->15|42->20|43->21|43->21|45->23|45->23|45->23|45->23
+                  HASH: 7c0c00d4207ebab433405a9601a95e84c7b481ab
+                  MATRIX: 987->260|1111->291|1138->292|1218->397|1254->406|1289->414|1315->419|1420->497|1435->503|1499->545|1582->601|1597->607|1660->648|1748->709|1763->715|1824->754|1886->878|1923->888|1951->895|1986->903|2027->917|2042->923|2103->963
+                  LINES: 26->7|31->8|32->9|35->12|36->13|36->13|36->13|37->14|37->14|37->14|38->15|38->15|38->15|39->16|39->16|39->16|42->20|43->21|43->21|45->23|45->23|45->23|45->23
                   -- GENERATED --
               */
           

@@ -1,0 +1,13 @@
+@import models.DataModel
+
+@(book: DataModel)
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("/stylesheets/main.css")">
+</head>
+@main("Find Book"){
+<h1 class="book">Google Book Api ProjectZZZZZZ</h1>
+<ul class="book">
+    <li class="book">@book.name</li>
+    <li class="book">@book.description</li>
+</ul>
+}

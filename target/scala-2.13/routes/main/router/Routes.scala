@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Mon Jan 09 14:45:11 GMT 2023
+// @DATE:Tue Feb 21 16:22:15 GMT 2023
 
 package router
 
@@ -50,6 +50,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/""" + "$" + """id<[^/]+>""", """controllers.ApplicationController.read(id:String)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/""" + "$" + """id<[^/]+>""", """controllers.ApplicationController.update(id:String)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/""" + "$" + """id<[^/]+>""", """controllers.ApplicationController.delete(id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """library/google/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""", """controllers.ApplicationController.getGoogleBook(search:String, term:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """example""", """controllers.ApplicationController.example()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewperson/form""", """controllers.ApplicationController.addBook()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewperson/form""", """controllers.ApplicationController.addBookForm()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -183,6 +187,78 @@ class Routes(
     )
   )
 
+  // @LINE:12
+  private[this] lazy val controllers_ApplicationController_getGoogleBook7_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("library/google/"), DynamicPart("search", """[^/]+""",true), StaticPart("/"), DynamicPart("term", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_ApplicationController_getGoogleBook7_invoker = createInvoker(
+    ApplicationController_0.getGoogleBook(fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.ApplicationController",
+      "getGoogleBook",
+      Seq(classOf[String], classOf[String]),
+      "GET",
+      this.prefix + """library/google/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:13
+  private[this] lazy val controllers_ApplicationController_example8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("example")))
+  )
+  private[this] lazy val controllers_ApplicationController_example8_invoker = createInvoker(
+    ApplicationController_0.example(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.ApplicationController",
+      "example",
+      Nil,
+      "GET",
+      this.prefix + """example""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:14
+  private[this] lazy val controllers_ApplicationController_addBook9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewperson/form")))
+  )
+  private[this] lazy val controllers_ApplicationController_addBook9_invoker = createInvoker(
+    ApplicationController_0.addBook(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.ApplicationController",
+      "addBook",
+      Nil,
+      "GET",
+      this.prefix + """addanewperson/form""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:15
+  private[this] lazy val controllers_ApplicationController_addBookForm10_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewperson/form")))
+  )
+  private[this] lazy val controllers_ApplicationController_addBookForm10_invoker = createInvoker(
+    ApplicationController_0.addBookForm(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.ApplicationController",
+      "addBookForm",
+      Nil,
+      "POST",
+      this.prefix + """addanewperson/form""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -226,6 +302,30 @@ class Routes(
     case controllers_ApplicationController_delete6_route(params@_) =>
       call(params.fromPath[String]("id", None)) { (id) =>
         controllers_ApplicationController_delete6_invoker.call(ApplicationController_0.delete(id))
+      }
+  
+    // @LINE:12
+    case controllers_ApplicationController_getGoogleBook7_route(params@_) =>
+      call(params.fromPath[String]("search", None), params.fromPath[String]("term", None)) { (search, term) =>
+        controllers_ApplicationController_getGoogleBook7_invoker.call(ApplicationController_0.getGoogleBook(search, term))
+      }
+  
+    // @LINE:13
+    case controllers_ApplicationController_example8_route(params@_) =>
+      call { 
+        controllers_ApplicationController_example8_invoker.call(ApplicationController_0.example())
+      }
+  
+    // @LINE:14
+    case controllers_ApplicationController_addBook9_route(params@_) =>
+      call { 
+        controllers_ApplicationController_addBook9_invoker.call(ApplicationController_0.addBook())
+      }
+  
+    // @LINE:15
+    case controllers_ApplicationController_addBookForm10_route(params@_) =>
+      call { 
+        controllers_ApplicationController_addBookForm10_invoker.call(ApplicationController_0.addBookForm())
       }
   }
 }

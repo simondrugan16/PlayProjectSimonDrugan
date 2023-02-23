@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Mon Jan 09 14:45:11 GMT 2023
+// @DATE:Tue Feb 21 16:22:15 GMT 2023
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -34,6 +34,46 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api"})
+        }
+      """
+    )
+  
+    // @LINE:12
+    def getGoogleBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApplicationController.getGoogleBook",
+      """
+        function(search0,term1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "library/google/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("search", search0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("term", term1))})
+        }
+      """
+    )
+  
+    // @LINE:14
+    def addBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApplicationController.addBook",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewperson/form"})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def addBookForm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApplicationController.addBookForm",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewperson/form"})
+        }
+      """
+    )
+  
+    // @LINE:13
+    def example: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApplicationController.example",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "example"})
         }
       """
     )
