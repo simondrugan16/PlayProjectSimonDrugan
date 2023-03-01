@@ -1,24 +1,16 @@
 package services
 
-import baseSpec.{BaseSpec, BaseSpecWithApplication}
+import baseSpec.BaseSpecWithApplication
 import com.mongodb.client.result.{DeleteResult, UpdateResult}
 import org.mongodb.scala.bson._
-import controllers.ApplicationController
 import models.{APIError, Book, DataModel}
-import org.mongodb.scala.bson
-import org.mongodb.scala.result.DeleteResult
 import org.scalamock.scalatest.MockFactory
-import org.scalatest.concurrent.Futures.whenReady
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{ResponseHeader, Result}
-import play.api.test.FakeRequest
-import play.api.test.Helpers.{contentAsJson, defaultAwaitTimeout, status}
-import repositories.{DataRepository, DataRepositoryTrait}
+import repositories.DataRepositoryTrait
 
-import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.concurrent.Future
 import play.api.http.{HttpEntity, Status}
-import play.api.http.Status.INTERNAL_SERVER_ERROR
-import play.api.mvc.Results.Accepted
 
 class RepositoryServiceUnitSpec extends BaseSpecWithApplication with MockFactory {
 

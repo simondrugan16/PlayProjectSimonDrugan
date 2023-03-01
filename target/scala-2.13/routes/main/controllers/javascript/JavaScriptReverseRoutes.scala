@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Tue Feb 21 16:22:15 GMT 2023
+// @DATE:Fri Feb 24 12:42:22 GMT 2023
 
 import play.api.routing.JavaScriptReverseRoute
 

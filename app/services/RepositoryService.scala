@@ -1,11 +1,10 @@
 package services
 
-import cats.data.EitherT
-import models.{APIError, Book, DataModel}
+import models.{APIError, DataModel}
 import org.mongodb.scala.result
 import org.mongodb.scala.result.UpdateResult
 import play.api.mvc.Result
-import repositories.{DataRepository, DataRepositoryTrait}
+import repositories.DataRepositoryTrait
 
 import javax.inject.{Inject, Singleton}
 import scala.concurrent.Future

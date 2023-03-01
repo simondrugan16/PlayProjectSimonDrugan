@@ -7,7 +7,6 @@ import org.mongodb.scala.model.Filters.empty
 import org.mongodb.scala.model._
 import org.mongodb.scala.result
 import org.mongodb.scala.result.UpdateResult
-import play.api.libs.json.JsSuccess
 import play.api.mvc.Result
 import play.api.mvc.Results.InternalServerError
 import uk.gov.hmrc.mongo.MongoComponent
@@ -51,8 +50,6 @@ class DataRepository @Inject()(mongoComponent: MongoComponent)(implicit ec: Exec
   def create(book: DataModel): Future[Either[Result, DataModel]] =
     collection
       .insertOne(book).headOption flatMap {
-//      .toFuture()
-//      .map(_ => book) flatMap {
       case Some(result) => Future(Right(book))
       case None => Future(Left(InternalServerError("ERROR: Could not create an item.")))
     }

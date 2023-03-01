@@ -1,14 +1,9 @@
 package controllers
 
-import cats.data.EitherT
-import models.APIError.BadAPIResponse
-import models.DataModel.bookForm
-import models.{APIError, Book, CollectionOfBooks, DataModel}
-import org.mongodb.scala.result
+import models.{Book, DataModel}
 import play.api.libs.json.{JsError, JsSuccess, JsValue, Json}
 import play.api.mvc.{Action, AnyContent, BaseController, ControllerComponents, Request, Result, Results}
 import play.filters.csrf.CSRF
-import repositories.DataRepository
 import services.{LibraryService, RepositoryService}
 
 import javax.inject.Inject

@@ -2,8 +2,7 @@ package services
 
 import cats.data.EitherT
 import connectors.LibraryConnector
-import models.{APIError, Book, CollectionOfBooks, DataModel}
-import play.api.mvc.Result
+import models.{APIError, Book}
 
 import javax.inject.{Inject, Singleton}
 import scala.concurrent.{ExecutionContext, Future}

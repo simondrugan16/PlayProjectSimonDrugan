@@ -49,7 +49,7 @@ Seq[Any](format.raw/*4.1*/("""<head>
 
               /*
                   -- GENERATED --
-                  DATE: 2023-02-21T16:22:16.309
+                  DATE: 2023-02-24T12:42:23.260
                   SOURCE: /Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/views/example.scala.html
                   HASH: 4ef245903d1d4289877271cec718e97078ca47b8
                   MATRIX: 432->1|765->27|876->45|974->117|988->123|1051->165|1088->177|1113->194|1151->195|1178->196|1297->288|1310->292|1336->297|1391->325|1404->329|1437->341
