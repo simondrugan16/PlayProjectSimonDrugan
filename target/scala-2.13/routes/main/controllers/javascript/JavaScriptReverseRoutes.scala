@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Fri Feb 24 12:42:22 GMT 2023
+// @DATE:Thu Mar 16 12:00:15 GMT 2023
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -53,7 +53,7 @@ package controllers.javascript {
       "controllers.ApplicationController.addBook",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewperson/form"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewbook/form"})
         }
       """
     )
@@ -63,7 +63,7 @@ package controllers.javascript {
       "controllers.ApplicationController.addBookForm",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewperson/form"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addanewbook/form"})
         }
       """
     )

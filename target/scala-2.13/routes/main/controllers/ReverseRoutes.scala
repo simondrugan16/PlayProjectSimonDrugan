@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Fri Feb 24 12:42:22 GMT 2023
+// @DATE:Thu Mar 16 12:00:15 GMT 2023
 
 import play.api.mvc.Call
 
@@ -38,13 +38,13 @@ package controllers {
     // @LINE:14
     def addBook(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "addanewperson/form")
+      Call("GET", _prefix + { _defaultPrefix } + "addanewbook/form")
     }
   
     // @LINE:15
     def addBookForm(): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "addanewperson/form")
+      Call("POST", _prefix + { _defaultPrefix } + "addanewbook/form")
     }
   
     // @LINE:13

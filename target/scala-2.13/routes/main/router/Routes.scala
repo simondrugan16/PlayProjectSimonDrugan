@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/conf/routes
-// @DATE:Fri Feb 24 12:42:22 GMT 2023
+// @DATE:Thu Mar 16 12:00:15 GMT 2023
 
 package router
 
@@ -52,8 +52,8 @@ class Routes(
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/""" + "$" + """id<[^/]+>""", """controllers.ApplicationController.delete(id:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """library/google/""" + "$" + """search<[^/]+>/""" + "$" + """term<[^/]+>""", """controllers.ApplicationController.getGoogleBook(search:String, term:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """example""", """controllers.ApplicationController.example()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewperson/form""", """controllers.ApplicationController.addBook()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewperson/form""", """controllers.ApplicationController.addBookForm()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewbook/form""", """controllers.ApplicationController.addBook()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addanewbook/form""", """controllers.ApplicationController.addBookForm()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -225,7 +225,7 @@ class Routes(
 
   // @LINE:14
   private[this] lazy val controllers_ApplicationController_addBook9_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewperson/form")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewbook/form")))
   )
   private[this] lazy val controllers_ApplicationController_addBook9_invoker = createInvoker(
     ApplicationController_0.addBook(),
@@ -235,7 +235,7 @@ class Routes(
       "addBook",
       Nil,
       "GET",
-      this.prefix + """addanewperson/form""",
+      this.prefix + """addanewbook/form""",
       """""",
       Seq()
     )
@@ -243,7 +243,7 @@ class Routes(
 
   // @LINE:15
   private[this] lazy val controllers_ApplicationController_addBookForm10_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewperson/form")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addanewbook/form")))
   )
   private[this] lazy val controllers_ApplicationController_addBookForm10_invoker = createInvoker(
     ApplicationController_0.addBookForm(),
@@ -253,7 +253,7 @@ class Routes(
       "addBookForm",
       Nil,
       "POST",
-      this.prefix + """addanewperson/form""",
+      this.prefix + """addanewbook/form""",
       """""",
       Seq()
     )

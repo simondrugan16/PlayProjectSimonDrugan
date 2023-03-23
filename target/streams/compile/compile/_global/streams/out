@@ -3,27 +3,27 @@
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      .insertOne(book).headOption flatMap {[0m
 [0m[[0m[33mwarn[0m] [0m[0m                       ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:70:31: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:68:31: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m    collection.find(byID(id)).headOption flatMap {[0m
 [0m[[0m[33mwarn[0m] [0m[0m                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:77:37: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:75:37: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m    collection.find(byTitle(title)).headOption flatMap {[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:88:7: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:86:7: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m    ).headOption flatMap {[0m
 [0m[[0m[33mwarn[0m] [0m[0m      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:110:9: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:108:9: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      ).headOption flatMap {[0m
 [0m[[0m[33mwarn[0m] [0m[0m        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:118:45: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:116:45: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method headOption,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m    collection.deleteOne(filter = byID(id)).headOption flatMap {[0m
@@ -44,7 +44,7 @@
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0mPOST      /api                               controllers.ApplicationController.create[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:98:43: unreachable code[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/simon.drugan/Documents/ScalaWorkplace/PlayProjectSimonDrugan/play-template/app/repositories/DataRepository.scala:96:43: unreachable code[0m
 [0m[[0m[33mwarn[0m] [0m[0m        case description: String => Future(Right(book.copy(description = update)))[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                          ^[0m
 [0m[[0m[33mwarn[0m] [0m[0m11 warnings found[0m
