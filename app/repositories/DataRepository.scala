@@ -18,7 +18,7 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 
 @ImplementedBy(classOf[DataRepository])
 trait DataRepositoryTrait {
-  def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]]
+  abstract def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]]
   def create(book: DataModel): Future[Either[Result, DataModel]]
   def read(id: String): Future[Either[Result, DataModel]]
   def readByTitle(title: String): Future[Either[Result, DataModel]]
@@ -40,7 +40,7 @@ class DataRepository @Inject()(mongoComponent: MongoComponent)(implicit ec: Exec
   replaceIndexes = false
 ) with DataRepositoryTrait {
 
-  def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]] = {
+  override def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]] = {
     collection.find().toFuture().map {
       case books: Seq[DataModel] => Right(books)
       case _ => Left(APIError.BadAPIResponse(500, "Internal Server Error Occurred"))
