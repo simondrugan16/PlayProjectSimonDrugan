@@ -40,7 +40,7 @@ class DataRepository @Inject()(mongoComponent: MongoComponent)(implicit ec: Exec
   replaceIndexes = false
 ) with DataRepositoryTrait {
 
-  def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]] = {
+  override def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]] = {
     collection.find().toFuture().map {
       case books: Seq[DataModel] => Right(books)
       case _ => Left(APIError.BadAPIResponse(500, "Internal Server Error Occurred"))

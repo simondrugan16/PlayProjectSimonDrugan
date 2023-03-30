@@ -35,11 +35,15 @@ class LibraryServiceSpec extends BaseSpec with MockFactory with ScalaFutures wit
         .returning(rightT(gameOfThrones.as[Book]))
         .once()
 
-      val myBook = Await.result(testService.getGoogleBook(urlOverride = Some(url), search = "", term = "").value, 2.minute)
+      whenReady(testService.getGoogleBook(urlOverride = Some(url), search = "", term = "").value) { result =>
+        result match {
+          case Left(value) => fail(s"This failed with unexpected value $value")
+          case Right(value) => value shouldBe(gameOfThrones.as[Book])
+      }
 
-      myBook match {
-        case Left(value) => fail(s"This failed with unexpected value $value")
-        case Right(value) => value shouldBe(gameOfThrones.as[Book])
+//      Await.result(testService.getGoogleBook(urlOverride = Some(url), search = "", term = "").value, 2.minute) match {
+//        case Left(value) => fail(s"This failed with unexpected value $value")
+//        case Right(value) => value shouldBe(gameOfThrones.as[Book])
       }
 
     }
