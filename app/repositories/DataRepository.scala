@@ -18,7 +18,7 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 
 @ImplementedBy(classOf[DataRepository])
 trait DataRepositoryTrait {
-  abstract def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]]
+  def index(): Future[Either[APIError.BadAPIResponse, Seq[DataModel]]]
   def create(book: DataModel): Future[Either[Result, DataModel]]
   def read(id: String): Future[Either[Result, DataModel]]
   def readByTitle(title: String): Future[Either[Result, DataModel]]
